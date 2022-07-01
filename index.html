@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <section class="calc-section">
+
+        <input id="display-box" type="text"  placeholder="0 0 0 0" readonly ><br>
+        <div id="opera">
+            <button id="btn"  onclick="operatorFun('+')"> +</button>
+            <button onclick="operatorFun('-')">-</button>
+            <button onclick="operatorFun('*')">x</button>
+            <button onclick="operatorFun('/')">/</button>
+            <br>
+        </div>
+        <div class="calc">
+            <div class="first-sec">
+                <button id="btn" onclick="numberFunc(7)"> 7</button>
+                <button onclick="numberFunc(8)"> 8</button>
+                <button onclick="numberFunc(9)"> 9</button>
+            </div>
+            <div class="second-sec">
+                <button id="btn" onclick="numberFunc(4)"> 4</button>
+                <button onclick="numberFunc(5)"> 5</button>
+                <button onclick="numberFunc(6)"> 6</button>
+            </div>
+            <div class="third-sec">
+                <button id="btn" onclick="numberFunc(1)"> 1</button>
+                <button onclick="numberFunc(2)"> 2</button>
+                <button onclick="numberFunc(3)"> 3</button>
+            </div>
+            <div class="fourth-sec">
+                <button id="btn" onclick="numberFunc(0)"> 0</button>
+                <button onclick="numberFunc('.')"> .</button>
+                <button id="clear" onclick="clearFunc()" onclick="operatorFunction('AC')"> AC</button>
+
+            </div>
+            <div class="final">
+                <button  id="final-id" onclick="equalFunc()"> =</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
