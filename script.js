@@ -2,36 +2,37 @@ var displayElement = document.getElementById("display-box");
 var value = 0;
 var add = "";
 var b = [];
-// var num=0;
+var num=0;
 function numberFunc(num) {
-    // displayElement.value += num;
-    displayElement.value =  displayElement.value + num;
+    displayElement.value += num;
+    // displayElement.value =  displayElement.value + num;
+    // console.log(num)
     // console.log(displayElement.value);
-    // add += num;
-    add = add + num ;
+    add += num;
+    // add = add + num ;
     // console.log(add);
 }
 
 
 function operatorFun(operator) {
     displayElement.value += operator;
-
-
     if (add != '') {
         b.push(add);
     }
     add = '';
     b.push(operator);
-    console.log(b);
+    // console.log(b);
 }
 
 
 function equalFunc() {
+    // displayElement.value = eval (displayElement.value)
     b.push(add);
     var addi;
     console.log(b);
     var empty = []
     for (var i = 0; i < b.length; i++) {
+        
         switch (b[i]) {
             case '+':
                 if (empty.length == 0) {
@@ -94,7 +95,10 @@ function equalFunc() {
 
 
 function clearFunc() {
-    displayElement.value = ""
+    add =""
+    displayElement.value = add
+    b =[]
+
 }  
 
 
